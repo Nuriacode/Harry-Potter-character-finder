@@ -1,6 +1,6 @@
-const getDataApi = () =>{
+const getDataApi = (house) =>{
     return (
-        fetch ('https://hp-api.onrender.com/api/characters')
+        fetch (`https://hp-api.onrender.com/api/characters/house/${house}`)
         .then ((response)=> response.json())
         .then ((data) => {
             const dataOk = data.map((eachCharacter) =>{
