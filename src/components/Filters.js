@@ -7,7 +7,7 @@ const Filters = ({setHouseSelect, house, setInputSearch, searchName}) =>{
     }
     return (
         <section>
-            <form onSubmit={handleSumbit}>
+            <form className='form' onSubmit={handleSumbit}>
                 <FilterInput setInputSearch={setInputSearch}
                 searchName={searchName}/>
                 <FilterHouse setHouseSelect={setHouseSelect} 

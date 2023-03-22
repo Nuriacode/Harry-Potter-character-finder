@@ -1,0 +1,23 @@
+.linkCard{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    width: 50vh;
+    margin-bottom: 10px;
+
+
+    
+    .cardCharacter{
+        width: 100px;
+            display: flex;
+            justify-content: column;
+            gap: 10px;
+
+            &__img {
+                    width: 150px;
+                }
+    }
+
+   
+
+}
