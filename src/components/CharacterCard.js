@@ -7,9 +7,9 @@ const CharacterCard = ({eachCharacter}) =>{
           <Link className='linkCard'to={`/character/${eachCharacter.id}`}>
           <li className='cardCharacter' >
           <img className='cardCharacter__img' src={eachCharacter.photo} alt=''/>  
-          <h3>{eachCharacter.name}</h3>
+
+          <h3 className='cardCharacter__name'>{eachCharacter.name}</h3>
           <p>{eachCharacter.species}</p>
-          <p>{eachCharacter.house}</p>
           </li>
           </Link>
         

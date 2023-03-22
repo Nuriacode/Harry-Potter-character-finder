@@ -1,3 +1,5 @@
+import avatar from '../components/imges/avatar.jpeg';
+
 const getDataApi = (house) =>{
     return (
         fetch (`https://hp-api.onrender.com/api/characters/house/${house}`)
@@ -10,7 +12,7 @@ const getDataApi = (house) =>{
                     species: eachCharacter.species,
                     house: eachCharacter.house,
                     alive: eachCharacter.alive,
-                    photo: eachCharacter.image
+                    photo: eachCharacter.image || avatar
                 };
             });
             return dataOk

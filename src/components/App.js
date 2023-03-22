@@ -51,7 +51,7 @@ function App() {
         <img className="header__img" src={logo} alt='Logo harry potter'/>
         <h1 className="header__title">Personajes de Harry Potter</h1>
       </header>
-      <main>
+      <main className="main">
         <Routes>
           <Route
             path="/"
@@ -64,7 +64,7 @@ function App() {
                   searchName={searchName}
                 />
 
-                <CharacterList 
+                <CharacterList className="characterList"
                 searchName={searchName}listCharacter={characterFiltered} characterFiltered={characterFiltered}
                 />
               </>

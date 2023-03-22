@@ -1,18 +1,22 @@
-const CharacterDetail = ({findCharacter}) =>{
+import "../styles/layout/CharacterDetail.scss";
 
-
-    return (
-        <>
-        <h2>Detalle del personaje</h2>
-        <article>
-           <img src={findCharacter.photo} alt=''/>  
-          <h3>{findCharacter.name}</h3>
-          <p>{findCharacter.species}</p>
-          <p>{findCharacter.house}</p>
-        </article>
-        </>
-        
-    )
-}
+const CharacterDetail = ({ findCharacter }) => {
+  return (
+    <div className="divDetail">
+      <article className="article">
+        <div className="article__div">
+          <img className="article__div--img" src={findCharacter.photo} alt="" />
+          <div className="article__div--text">
+            <h3>{findCharacter.name}</h3>
+            <p>Especie: {findCharacter.species}</p>
+            <p>Genero: {findCharacter.alive}</p>
+            <p>Casa: {findCharacter.house}</p>
+             <p>Estatus: {findCharacter.alive}</p>
+          </div>
+        </div>
+      </article>
+    </div>
+  );
+};
 
 export default CharacterDetail;

@@ -1,0 +1,33 @@
+.divDetail {
+  background-color: black;
+  background-image: url(../../components/imges/harry_background.png);
+  background-size: 50%;
+}
+
+.article {
+    height: 80vh;
+  display: flex;
+  justify-content: center;
+  padding-top: 30px;
+  padding-bottom: 30px;
+
+  &__div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-self: center;
+    border: solid 1px gold;
+    border-radius: 20px;
+    background-color: gold;
+    padding: 15px;
+    gap: 15px;
+    &--img{
+        width: 40vw;
+        border-radius: 10%;
+    }
+    &--text{
+        padding: 10px;
+    }
+  }
+  
+}
