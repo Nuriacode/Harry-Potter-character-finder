@@ -1,6 +1,10 @@
 import CharacterCard from "./CharacterCard";
+import ErrorMessage from "./ErrorMessage";
 
-const CharacterList = ({listCharacter}) =>{
+const CharacterList = ({listCharacter, searchName}) =>{
+    if(listCharacter.length === 0 && searchName !== ""){
+        return <ErrorMessage/>
+    }
 
     const dataHtml = listCharacter.map((eachCharacter) => {
         return (
@@ -9,9 +13,12 @@ const CharacterList = ({listCharacter}) =>{
     }) 
 
     return (
+        
+           
         <ul>
           {dataHtml}
         </ul>
+        
     )
 }
 

@@ -1,1 +1,21 @@
 /* Aquí van tus estilos */
+
+.header{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: url('../components/imges/background.jpeg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    &__img{
+        width: 50vw;
+        margin-top: 30px;
+        margin-bottom: 10px;
+    }
+    &__title{
+        color: gold;
+        margin-bottom: 30px;
+    }
+}
