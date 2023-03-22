@@ -6,7 +6,7 @@ const FilterInput = ({setInputSearch, searchName}) =>{
 
     return (
         <>
-        <label for="search">Busca por personaje</label>
+        <label htmlFor="search">Busca por personaje</label>
         <input type='text' id="search" onInput={handleInput} value={searchName}
         placeholder="Escribe aquí"
         />
