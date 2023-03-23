@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import {Link} from 'react-router-dom';
 import '../styles/layout/CharacterCard.scss';
 
@@ -15,5 +16,10 @@ const CharacterCard = ({eachCharacter}) =>{
         
     )
 }
+
+
+CharacterCard.propTypes = {
+eachCharacter: PropTypes.func.isRequired
+};
 
 export default CharacterCard;

@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import '../styles/layout/FilterInput.scss'
 const FilterInput = ({setInputSearch, searchName}) =>{
 
@@ -15,5 +16,12 @@ const FilterInput = ({setInputSearch, searchName}) =>{
        
     )
 }
+
+FilterInput.propTypes = {
+setInputSearch: PropTypes.func.isRequired,
+searchName: PropTypes.string.isRequired
+
+};
+
 
 export default FilterInput;

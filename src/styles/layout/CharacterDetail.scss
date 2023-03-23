@@ -5,13 +5,14 @@
 }
 
 .article {
-    height: 80vh;
+  height: 80vh;
   display: flex;
   justify-content: center;
   padding-top: 30px;
   padding-bottom: 30px;
 
   &__div {
+    
     display: flex;
     justify-content: center;
     align-items: center;
@@ -27,7 +28,18 @@
     }
     &--text{
         padding: 10px;
+        &--logo {
+          width: 200px;
+        }
     }
   }
   
+}
+
+.fa-circle-arrow-left{
+  color:white;
+  display: flex;
+  text-decoration: none;
+  color: rgba(122, 8, 8, 0.799);
+  width: 20px;
 }
