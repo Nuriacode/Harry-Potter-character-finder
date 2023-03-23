@@ -1,5 +1,6 @@
 import PropTypes from 'prop-types';
 import '../styles/layout/FilterInput.scss'
+
 const FilterInput = ({setInputSearch, searchName}) =>{
 
     const handleInput = (ev) =>{

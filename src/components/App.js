@@ -11,6 +11,7 @@ function App() {
   const [listCharacter, setListCharacter] = useState([]);
   const [house, setHouse] = useState("gryffindor");
   const [searchName, setSearchName] = useState("");
+  const [gender, setGender] = useState('')
 
   useEffect(() => {
     getDataApi(house).then((dataOk) => {
@@ -26,16 +27,24 @@ function App() {
     setSearchName(value);
   };
 
-  const characterFiltered = listCharacter.filter((eachCharacter) =>
+  const setGenderRadio = (value) =>{
+    setGender(value)
+  }
+
+  const characterFiltered = listCharacter
+  .filter((eachCharacter) =>
     eachCharacter.name
       .toLocaleLowerCase()
       .includes(searchName.toLocaleLowerCase())
-  );
+  )
+  .filter((eachCharacter)=> {
+    return gender === '' ? true : eachCharacter.gender === gender
+  })
+  
 
   const { pathname } = useLocation();
 
   const urlData = matchPath("/character/:id", pathname);
-  console.log(urlData);
 
   const characterId = urlData !== null ? urlData.params.id : null;
 
@@ -43,6 +52,9 @@ function App() {
     (eachCharacter) => eachCharacter.id === characterId
   );
   console.log(findCharacter);
+
+
+
 
   return (
     <div>
@@ -61,6 +73,8 @@ function App() {
                   setHouseSelect={setHouseSelect}
                   setInputSearch={setInputSearch}
                   searchName={searchName}
+                  setGenderRadio={setGenderRadio}
+                  gender={gender}
                 />
 
                 <CharacterList
@@ -82,7 +96,5 @@ function App() {
   );
 }
 
-/* PROP-TYPES */
 
-/* EXPORT DEL COMPONENTE */
 export default App;
